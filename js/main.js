@@ -35,7 +35,6 @@
 
 		output.children().each( function( index, element ){
 			var hexColor = $( element ).backgroundHexColor();
-			console.log( hexColor );
 
 			if ( 'undefined' != typeof hexColor ) {
 				$( element ).find( '.hex' ).html( hexColor );
