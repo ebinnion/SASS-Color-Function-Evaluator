@@ -10,7 +10,6 @@
 	evaluate.on( 'submit', function( e ){
 		e.preventDefault();
 		output.html( '' );
-		console.log( 'made it here' );
 
 		var tempInput = ( input.val().length ) ? input.val() : input.attr( 'placeholder' ),
 			matches = tempInput.match(/\$(.+):/g);
