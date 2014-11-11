@@ -12,7 +12,7 @@
 		output.html( '' );
 		console.log( 'made it here' );
 
-		var tempInput = input.val(),
+		var tempInput = ( input.val().length ) ? input.val() : input.attr( 'placeholder' ),
 			matches = tempInput.match(/\$(.+):/g);
 
 		var styleTemplate = Handlebars.compile( stylesheetTemplate.html() ),
