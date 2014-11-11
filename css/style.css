@@ -5,6 +5,7 @@ textarea {
 .container {
 	max-width: 600px;
 	margin: 0 auto;
+	padding: 0 0 1em 0;
 }
 
 #color-output > div {

@@ -10,7 +10,7 @@
 
 	evaluate.on( 'submit', function( e ){
 		e.preventDefault();
-		output.empty().html();
+		output.html( '' );
 
 		var tempInput = input.val(),
 			reg = new RegExp(/\$(.+):/g);
@@ -35,9 +35,12 @@
 
 		output.children().each( function( index, element ){
 			var hexColor = $( element ).backgroundHexColor();
+			console.log( hexColor );
 
-			if ( 'undefined' !== typeof hexColor ) {
+			if ( 'undefined' != typeof hexColor ) {
 				$( element ).find( '.hex' ).html( hexColor );
+			} else {
+				$( element ).hide();
 			}
 		});
 	});
